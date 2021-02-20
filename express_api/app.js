@@ -5,9 +5,9 @@ var path = require("path");
 var logger = require("morgan");
 var cors = require("cors");
 
-var indexRouter = require("./routes/index");
+var homeRouter = require("./routes/home");
 var usersRouter = require("./routes/users");
-var testAPIRouter = require("./routes/testAPI"); // changes
+var hospitalsRouter = require("./routes/hospitals"); // changes
 const bodyParser = require("body-parser");
 
 var app = express();
@@ -24,9 +24,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use("/", indexRouter);
+app.use("/", homeRouter);
 app.use("/users", usersRouter);
-app.use("/testAPI", testAPIRouter); // changes
+app.use("/testAPI", hospitalsRouter); // changes
 
 const db = require("./models");
 db.mongoose

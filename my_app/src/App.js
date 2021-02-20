@@ -1,42 +1,34 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
 import "./App.css";
+import { Route, NavLink, HashRouter } from "react-router-dom";
+import Home from "./Home";
+import Hospitals from "./Hospitals";
+import Users from "./Users";
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { apiResponse: "" };
-  }
-
-  callAPI() {
-    fetch("http://localhost:9000/testAPI")
-      .then((res) => res.text())
-      .then((res) => this.setState({ apiResponse: res }));
-  }
-
-  componentWillMount() {
-    this.callAPI();
-  }
-
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p className="App-intro">
-            {this.state.apiResponse}
-            {/* Edit <code>src/App.js</code> and save to reload. */}
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <HashRouter>
+        <div>
+          <h1>Covid Tracker App</h1>
+          <ul className="header">
+            <li>
+              <NavLink to="/">Home</NavLink>
+            </li>
+            <li>
+              <NavLink to="/hospitals">Hospitals Portal</NavLink>
+            </li>
+            <li>
+              <NavLink to="/users">Users Portal</NavLink>
+            </li>
+          </ul>
+          <div className="content">
+            <Route exact path="/" component={Home} />
+            <Route path="/hospitals" component={Hospitals} />
+            <Route path="/users" component={Users} />
+          </div>
+        </div>
+      </HashRouter>
     );
   }
 }
