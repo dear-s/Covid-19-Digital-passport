@@ -4,6 +4,7 @@ import { Route, NavLink, HashRouter } from "react-router-dom";
 import Home from "./Home";
 import Hospitals from "./Hospitals";
 import Users from "./Users";
+import HosDash from "./Hospital_dashboard";
 
 class App extends Component {
   render() {
@@ -26,6 +27,7 @@ class App extends Component {
             <Route exact path="/" component={Home} />
             <Route path="/hospitals" component={Hospitals} />
             <Route path="/users" component={Users} />
+            <Route path="/hos_dash" component={HosDash} />
           </div>
         </div>
       </HashRouter>

@@ -6,6 +6,7 @@ mongoose.Promise = global.Promise;
 const db = {};
 db.mongoose = mongoose;
 db.url = dbConfig.url;
-db.covid_tracker = require("./schemaModel.js")(mongoose);
+db.hospital_enters_schema = require("./hospital_enters_schema.js")(mongoose);
+db.hospital_info_schema = require("./hospital_info_schema.js")(mongoose);
 
 module.exports = db;
