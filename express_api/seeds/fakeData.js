@@ -55,3 +55,60 @@ module.exports.passwords = [
   "&n@p*OI1p5",
   ")m^s2LnG8N",
 ];
+
+module.exports.username = [
+  "sanyasin",
+  "knuthala",
+  "romakaul",
+  "gadlakha",
+  "sasasas",
+  "prsajyfd",
+  "dnshfjhd",
+];
+
+module.exports.gender = ["female", "male"];
+
+module.exports.age = [45, 12, 2, 5, 48, 45, 26];
+
+module.exports.first_name = [
+  "Sanya",
+  "Kranthi",
+  "Roma",
+  "Garima",
+  "Harry",
+  "Zayn",
+  "Jin",
+  "Jimin",
+];
+
+module.exports.last_name = [
+  "Singh",
+  "Nuthalapati",
+  "Kaul",
+  "Adlakha",
+  "Lee",
+  "Swift",
+  "Seed",
+  "Java",
+];
+
+module.exports.dob = ["01/24/2002", "03/07,1998", "03/28/1997", "4/12/2002"];
+
+module.exports.vaccination_center = [
+  "AKS123424DKJNS",
+  "BKHB34234HGFCC",
+  "JHGHFJ7657354K",
+  "MOKJO543234453",
+  "BGFHGFGHF79888",
+  "SSSMMMS555NNNK",
+  "NBHGDF4339HBHB",
+  "NKJBVHFXA34567",
+  "ZCVB34567CVB88",
+];
+
+module.exports.user_address = [
+  "27 St bar Los Angeles",
+  "45 St 5 west Kansas",
+  "125 W 27th San",
+  "56 S 28th Seattle",
+];

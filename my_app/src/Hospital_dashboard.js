@@ -1,7 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import queryString from "query-string";
-import axios from "axios";
+import "./hosp_dash.css";
 
 class Hospitals extends Component {
   myFunction1() {
@@ -20,27 +18,28 @@ class Hospitals extends Component {
         global.address = data.address;
         global.password = data.password;
 
-        demo.innerHTML = `<table><tr><td>Hospital Name: </td><td>${global.name}</td></tr><tr><td>Hospital Id: </td><td>${global.hospital_id}</td></tr><tr><td>Hospital Address: </td><td>${global.address}</td></tr><tr><td>Hospital Password: </td><td>${global.password}</td></tr</table>`;
+        demo.innerHTML = `<div id="table_div"><table id="data_table"><tr><td id="rows" class = "parameters">Hospital Name: </td><td id="rows">${global.name}</td></tr><tr><td id="rows" class="parameters">Hospital Id: </td><td id="rows">${global.hospital_id}</td></tr><tr><td id="rows" class="parameters">Hospital Address: </td><td id="rows">${global.address}</td></tr><tr><td id="rows" class="parameters">Hospital Password: </td><td id="rows">${global.password}</td></tr></table></div>`;
       })
       .catch((e) => console.log(e));
   }
 
   myFunction2() {
     var demo = document.getElementById("demo");
-    demo.innerHTML = `<form action='http://localhost:9000/hospitals/${global.id}' method="POST">
-          <div>
-            <label for="passport_no">Passport No.</label>
+    demo.innerHTML = `<form class="form_class" action='http://localhost:9000/hospitals/${global.id}' method="POST">
+          <div id="rows">
+            <label id="label1" for="passport_no">Passport No.</label>
             <input name = "passport_no" id="passport_no"></input>
           </div>
-          <div>
-            <label for="status">Status</label>
+          <div id="ro
+          ws">
+            <label id="label2" for="status">Status</label>
             <select name="status" id="status">
               <option value="vaccinated">Vaccinated</option>
               <option value="not_vaccinated">Not Vaccinated</option>
             </select>
           </div>
           <div>
-            <button>Add to the database!</button>
+            <button id="add_button">Add to the database!</button>
           </div>
         </form>`;
   }
@@ -49,21 +48,55 @@ class Hospitals extends Component {
     global.id = this.props.match.params.id;
     console.log("global.id: ", global.id);
 
-    //   from id - get other params
-
+    //   from id - AKS123424DKJNS
     return (
       <div>
-        <h2>Let's fight covid-19 together!</h2>
+        <h2 id="message">Let's fight Covid-19 together!</h2>
         {/* fetch hospital id value */}
-        <h4>Welcome, {global.id}</h4>
+        <h4 id="welcome">Welcome, {global.id}</h4>
 
         {/* 2 toggle buttons/switches */}
-        <button onClick={this.myFunction1}>View Profile</button>
-        <button onClick={this.myFunction2}>Add Data to the Database</button>
+        <div id="two_buttons_div">
+          <div id="buttons_data">
+            <button id="btn1" onClick={this.myFunction1}>
+              View Profile
+            </button>
+            <button id="btn2" onClick={this.myFunction2}>
+              Add Data to the Database
+            </button>
+          </div>
+        </div>
 
-        {/* lets make some fake data then come here - sanya */}
-
-        <div id="demo"></div>
+        <div id="demo">
+          <div id="table_div">
+            <table id="data_table">
+              <tr>
+                <td id="rows" class="parameters">
+                  Hospital Name:
+                </td>
+                <td id="rows">{global.name}</td>
+              </tr>
+              <tr>
+                <td id="rows" class="parameters">
+                  Hospital Id:
+                </td>
+                <td id="rows">{global.hospital_id}</td>
+              </tr>
+              <tr>
+                <td id="rows" class="parameters">
+                  Hospital Address:
+                </td>
+                <td id="rows">{global.address}</td>
+              </tr>
+              <tr>
+                <td id="rows" class="parameters">
+                  Hospital Password:
+                </td>
+                <td id="rows">{global.password}</td>
+              </tr>
+            </table>
+          </div>
+        </div>
       </div>
     );
   }

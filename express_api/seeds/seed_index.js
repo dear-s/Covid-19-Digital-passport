@@ -6,10 +6,19 @@ const {
   hospital_name,
   hospital_address,
   passwords,
+  first_name,
+  last_name,
+  user_address,
+  vaccination_center,
+  dob,
+  age,
+  gender,
+  username,
 } = require("./fakeData");
 
 const HospitalEntersSchema = require("../models/hospital_enters_schema");
 const HospitalInfoSchema = require("../models/hospital_info_schema");
+const UserInfoSchema = require("../models/user_schema");
 
 mongoose.connect("mongodb://localhost:27017/pearl-hacks", {
   useNewUrlParser: true,
@@ -51,12 +60,24 @@ const seedDB = async () => {
     });
     await dataset2.save();
   }
+
+  await UserInfoSchema.deleteMany({});
+
+  for (let i = 0; i < 10; i++) {
+    const dataset3 = new UserInfoSchema({
+      username: `${sample(username)}`,
+      first_name: `${sample(first_name)}`,
+      last_name: `${sample(last_name)}`,
+      dob: `${sample(dob)}`,
+      address: `${sample(user_address)}`,
+      vaccination_center: `${sample(vaccination_center)}`,
+      passport_no: `${sample(passport_no)}`,
+      password: `${sample(passwords)}`,
+    });
+    await dataset3.save();
+  }
 };
 
 seedDB().then(() => {
   mongoose.connection.close();
 });
-
-// const seedDB2 = async () => {
-
-// };

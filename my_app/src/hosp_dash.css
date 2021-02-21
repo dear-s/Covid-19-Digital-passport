@@ -1,0 +1,99 @@
+#message{
+    text-align: center;
+    color: rgb(138, 54, 68);
+}
+
+#table_div{
+    align-items: center;
+    width: 100%;
+}
+
+#two_buttons_div{
+    align-items: center;
+    background: rgba(221, 141, 151, 0.247);
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+#btn1{
+    background: rgba(221, 141, 150, 0);
+    color: inherit;
+    border: none;
+    padding: 10px;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    margin-right: 70px;
+    font-weight: 700;
+}
+
+#btn1:hover{
+    background-color: rgb(56, 33, 37);
+    color: white;
+}
+
+#btn2{
+    background: rgba(221, 141, 150, 0);
+    color: inherit;
+    border: none;
+    padding: 10px;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    font-weight: 700;
+}
+
+#btn2:hover {
+    background-color: rgb(56, 33, 37);
+    color: white;
+}
+
+#buttons_data{
+    align-items: center;
+}
+
+#welcome{
+    margin-left: 70px;
+}
+
+#data_table{
+    margin-left: 70px;
+    margin-top: 20px;
+    align-self: center;
+    margin-right: 70px;
+    width: 100%;
+}
+
+#rows{
+    padding: 10px;
+}
+
+.parameters{
+    font-weight: 500;
+}
+
+.form_class{
+    margin-left: 70px;
+    margin-top: 20px;
+}
+
+#label1{
+    padding: 30px;
+}
+
+#label2{
+    padding: 40px;
+}
+
+#passport_no{
+    margin-left: 34px;
+}
+
+#status{
+    margin-left: 70px;
+}
+
+#add_button{
+    margin-top: 30px;
+    margin-left: 70px;
+}
