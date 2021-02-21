@@ -44,6 +44,26 @@ class Hospitals extends Component {
         </form>`;
   }
 
+  myFunction3() {
+    var demo = document.getElementById("demo");
+    demo.innerHTML = `<div id="head_div"><span id="first_col_head">Passport Number</span><span id="second_col_head">Vaccination Status</span></div><br>`;
+
+    // console.log("check connection - 3 function");
+    const url = `http://localhost:9000/hospitals/view_db`;
+    const dataa = fetch(url)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("data: ", data);
+        for (var i = 0; i < 10; i++) {
+          global.passport_no = data[i]["passport_no"];
+          global.status = data[i]["status"];
+
+          demo.innerHTML += `<div id="rows_dataa"><span id="first_col">${global.passport_no}</span><span id="second_col">${global.status}</span><div><br>`;
+        }
+      })
+      .catch((e) => console.log(e));
+  }
+
   render() {
     global.id = this.props.match.params.id;
     console.log("global.id: ", global.id);
@@ -64,6 +84,9 @@ class Hospitals extends Component {
             <button id="btn2" onClick={this.myFunction2}>
               Add Data to the Database
             </button>
+            <button id="btn3" onClick={this.myFunction3}>
+              View database
+            </button>
           </div>
         </div>
 
@@ -71,25 +94,25 @@ class Hospitals extends Component {
           <div id="table_div">
             <table id="data_table">
               <tr>
-                <td id="rows" class="parameters">
+                <td id="rows" className="parameters">
                   Hospital Name:
                 </td>
                 <td id="rows">{global.name}</td>
               </tr>
               <tr>
-                <td id="rows" class="parameters">
+                <td id="rows" className="parameters">
                   Hospital Id:
                 </td>
                 <td id="rows">{global.hospital_id}</td>
               </tr>
               <tr>
-                <td id="rows" class="parameters">
+                <td id="rows" className="parameters">
                   Hospital Address:
                 </td>
                 <td id="rows">{global.address}</td>
               </tr>
               <tr>
-                <td id="rows" class="parameters">
+                <td id="rows" className="parameters">
                   Hospital Password:
                 </td>
                 <td id="rows">{global.password}</td>

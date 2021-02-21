@@ -40,10 +40,27 @@
     font: inherit;
     cursor: pointer;
     outline: inherit;
+    margin-right: 70px;
+    font-weight: 700;
+}
+
+#btn3 {
+    background: rgba(221, 141, 150, 0);
+    color: inherit;
+    border: none;
+    padding: 10px;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
     font-weight: 700;
 }
 
 #btn2:hover {
+    background-color: rgb(56, 33, 37);
+    color: white;
+}
+
+#btn3:hover {
     background-color: rgb(56, 33, 37);
     color: white;
 }
@@ -96,4 +113,45 @@
 #add_button{
     margin-top: 30px;
     margin-left: 70px;
+}
+
+#head_div{
+    margin-top: 20px;
+}
+
+#first_col{
+    margin-left: 70px;
+    padding-left: 70px;
+}
+
+#first_col_head {
+    margin-top: 20px;
+    margin-left: 110px;
+    padding-left: 70px;
+    font-weight: 700;
+    width: 50%;
+}
+
+#second_col{
+    margin-left: 200px;
+}
+
+
+#second_col_head {
+    margin-top: 20px;
+    padding-top: 20px;
+    margin-left: 90px;
+    padding-left: 70px;
+    font-weight: 700;
+    width: 50%;
+}
+
+#rows_dataa{
+    margin-left: 70px;
+    margin-right: 70px;
+    border-bottom: 1px solid rgba(221, 141, 151, 0.247);
+}
+
+#rows_dataa:hover{
+    background: rgba(221, 141, 151, 0.247);
 }

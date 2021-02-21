@@ -9,6 +9,7 @@ var homeRouter = require("./routes/home");
 var usersRouter = require("./routes/users");
 var hospitalsRouter = require("./routes/hospitals"); // changes
 var hospitalsIDRouter = require("./routes/hos_dash"); // changes
+var viewDBRouter = require("./routes/view_db"); // changes
 const bodyParser = require("body-parser");
 
 var app = express();
@@ -28,6 +29,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/", homeRouter);
 app.use("/users", usersRouter);
 app.use("/hospitals", hospitalsRouter); // changes
+app.use("/hospitals/view_db", viewDBRouter); // changes
 app.use("/hospitals/:id", hospitalsIDRouter); // changes
 
 const db = require("./models");
