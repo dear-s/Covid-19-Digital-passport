@@ -31,7 +31,13 @@ class Home extends Component {
         </ul>
 
         <h3>Future Scope</h3>
-        
+        <ul>
+          <li>
+            The vaccination status can be shared directly with the airlines at the time of booking the flight in order to avoid dependence on the internet or cellphone at the time of boarding or landing.
+          </li>
+      <li>Also, develop a mobile app for ease in usage</li>
+      <li>Incorporate an analytics section for the analysts to regulate the circulation of vaccines efficiently</li>
+        </ul>
       </div>
     );
   }
