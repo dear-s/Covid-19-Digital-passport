@@ -10,6 +10,9 @@ var usersRouter = require("./routes/users");
 var hospitalsRouter = require("./routes/hospitals"); // changes
 var hospitalsIDRouter = require("./routes/hos_dash"); // changes
 var viewDBRouter = require("./routes/view_db"); // changes
+var userPortalRouter = require("./routes/user_portal"); // changes
+var userDashRouter = require("./routes/user_dash"); // changes
+
 const bodyParser = require("body-parser");
 
 var app = express();
@@ -30,7 +33,9 @@ app.use("/", homeRouter);
 app.use("/users", usersRouter);
 app.use("/hospitals", hospitalsRouter); // changes
 app.use("/hospitals/view_db", viewDBRouter); // changes
-app.use("/hospitals/:id", hospitalsIDRouter); // changes
+app.use("/hospitalportal/:id", hospitalsIDRouter); // changes
+app.use("/userportal", userPortalRouter); // changes
+app.use("/userportal/:username", userDashRouter); // changes
 
 const db = require("./models");
 db.mongoose

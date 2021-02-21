@@ -7,7 +7,7 @@ const user_schema = new Schema({
   last_name: String,
   dob: String,
   address: String,
-  vaccination_center: String,
+  // vaccination_center: String,
   passport_no: String,
 
   password: String,

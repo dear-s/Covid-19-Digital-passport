@@ -78,7 +78,12 @@
     margin-top: 20px;
     align-self: center;
     margin-right: 70px;
-    width: 100%;
+    width: 50%;
+}
+.values{
+    /* margin-left: -80px; */
+    margin-right: 400px;
+    font-weight: 900;
 }
 
 #rows{

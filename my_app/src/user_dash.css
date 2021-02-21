@@ -1,0 +1,96 @@
+#static_table{
+    position: absolute;
+    left: 25%;
+    top: 30%;
+    background-color: rgba(136, 55, 55, 0.89);
+    border-radius: 3px;
+    padding: 70px 100px;
+    margin-top: 50px;
+    color: white;
+}
+
+#make_left{
+    margin-left: 200px;
+}
+
+#status_div{
+    margin-left: 70px;
+    font-size: 35px;
+    color: #4a3661;
+    font-weight: 600;
+}
+
+#white_button{
+    margin-bottom: 20px;
+}
+
+
+
+button {
+    outline: none;
+    border-raduis: 10px;
+    border: none;
+    padding: 10px;
+    color: #222;
+    border-radius: 10px;
+    font-size: 1.2em;
+    font-weight: 200;
+    transition: all 0.2s;
+    margin: 5px;
+    border-bottom: 0px solid #eee;
+    margin-left: 70px;
+}
+
+button:active {
+    transform: scaleX(0.9) translateY(4px);
+}
+
+button.green {
+    background: #82CA9D;
+}
+
+button.green:not(:active) {
+    border-bottom: 4px solid #62AA7D;
+}
+
+button.red {
+    background: #F7977A;
+}
+
+button.red:not(:active) {
+    border-bottom: 4px solid #D7775A;
+}
+
+button.blue {
+    background: #7EA7D8;
+}
+
+button.blue:not(:active) {
+    border-bottom: 4px solid #5E87B8;
+}
+
+button.yellow {
+    background: #FDC68A;
+}
+
+button.yellow:not(:active) {
+    border-bottom: 4px solid #DDA66A;
+}
+
+button.purple {
+    background: #A187BE;
+}
+
+button.purple:not(:active) {
+    border-bottom: 4px solid #81679E;
+}
+
+h1 {
+    padding: 5px;
+    font-weight: 200;
+    color: #333;
+}
+
+#rowsss {
+    margin-bottom: 50px;
+}

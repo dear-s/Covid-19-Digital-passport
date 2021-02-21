@@ -94,17 +94,17 @@ module.exports.last_name = [
 
 module.exports.dob = ["01/24/2002", "03/07,1998", "03/28/1997", "4/12/2002"];
 
-module.exports.vaccination_center = [
-  "AKS123424DKJNS",
-  "BKHB34234HGFCC",
-  "JHGHFJ7657354K",
-  "MOKJO543234453",
-  "BGFHGFGHF79888",
-  "SSSMMMS555NNNK",
-  "NBHGDF4339HBHB",
-  "NKJBVHFXA34567",
-  "ZCVB34567CVB88",
-];
+// module.exports.vaccination_center = [
+//   "AKS123424DKJNS",
+//   "BKHB34234HGFCC",
+//   "JHGHFJ7657354K",
+//   "MOKJO543234453",
+//   "BGFHGFGHF79888",
+//   "SSSMMMS555NNNK",
+//   "NBHGDF4339HBHB",
+//   "NKJBVHFXA34567",
+//   "ZCVB34567CVB88",
+// ];
 
 module.exports.user_address = [
   "27 St bar Los Angeles",

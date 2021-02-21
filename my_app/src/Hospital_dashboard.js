@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import "./hosp_dash.css";
 
-class Hospitals extends Component {
+class Hospitals_Dash extends Component {
   myFunction1() {
     var demo = document.getElementById("demo");
 
     // fetch hospital profile data - using global.id - get data from API
     // const [notes, getNotes] = useState("");
     console.log("check connection");
-    const url = `http://localhost:9000/hospitals/${global.id}`;
+    const url = `http://localhost:9000/hospitalportal/${global.id}`;
     const dataa = fetch(url)
       .then((res) => res.json())
       .then((data) => {
@@ -18,14 +18,14 @@ class Hospitals extends Component {
         global.address = data.address;
         global.password = data.password;
 
-        demo.innerHTML = `<div id="table_div"><table id="data_table"><tr><td id="rows" class = "parameters">Hospital Name: </td><td id="rows">${global.name}</td></tr><tr><td id="rows" class="parameters">Hospital Id: </td><td id="rows">${global.hospital_id}</td></tr><tr><td id="rows" class="parameters">Hospital Address: </td><td id="rows">${global.address}</td></tr><tr><td id="rows" class="parameters">Hospital Password: </td><td id="rows">${global.password}</td></tr></table></div>`;
+        demo.innerHTML = `<div id="table_div"><table id="data_table"><tr><td id="rows" class = "parameters">Hospital Name: </td><td id="rows" class="values">${global.name}</td></tr><tr><td id="rows" class="parameters">Hospital Id: </td><td id="rows" class="values">${global.hospital_id}</td></tr><tr><td id="rows" class="parameters">Hospital Address: </td><td id="rows" class="values">${global.address}</td></tr><tr><td id="rows" class="parameters">Hospital Password: </td><td id="rows" class="values">${global.password}</td></tr></table></div>`;
       })
       .catch((e) => console.log(e));
   }
 
   myFunction2() {
     var demo = document.getElementById("demo");
-    demo.innerHTML = `<form class="form_class" action='http://localhost:9000/hospitals/${global.id}' method="POST">
+    demo.innerHTML = `<form class="form_class" action='http://localhost:9000/hospitalportal/${global.id}' method="POST">
           <div id="rows">
             <label id="label1" for="passport_no">Passport No.</label>
             <input name = "passport_no" id="passport_no"></input>
@@ -71,7 +71,7 @@ class Hospitals extends Component {
     //   from id - AKS123424DKJNS
     return (
       <div>
-        <h2 id="message">Let's fight Covid-19 together!</h2>
+        <h2 id="make_left">Let's fight Covid-19 together!</h2>
         {/* fetch hospital id value */}
         <h4 id="welcome">Welcome, {global.id}</h4>
 
@@ -125,4 +125,4 @@ class Hospitals extends Component {
   }
 }
 
-export default Hospitals;
+export default Hospitals_Dash;

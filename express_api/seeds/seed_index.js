@@ -70,7 +70,7 @@ const seedDB = async () => {
       last_name: `${sample(last_name)}`,
       dob: `${sample(dob)}`,
       address: `${sample(user_address)}`,
-      vaccination_center: `${sample(vaccination_center)}`,
+      // vaccination_center: `${sample(vaccination_center)}`,
       passport_no: `${sample(passport_no)}`,
       password: `${sample(passwords)}`,
     });

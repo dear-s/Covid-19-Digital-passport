@@ -9,7 +9,9 @@ router.get("/", async (req, res, next) => {
 
   // get id somehow ---- get id - NEED TO DO
   const full_path = req._parsedOriginalUrl.pathname;
-  global.id = full_path.slice(11, full_path.length);
+  global.id = full_path.slice(16, full_path.length);
+
+  console.log(global.id);
 
   const hosp_info = await hospital_info_schema.findOne({
     hospital_id: global.id,
@@ -24,7 +26,7 @@ router.post("/", async (req, res, next) => {
   console.log("req.body: ", req.body);
   const new_entry = new hospital_enters_schema(req.body);
   await new_entry.save();
-  res.redirect(`http://localhost:3000/#/hospitals/${global.id}`);
+  res.redirect(`http://localhost:3000/#/hospitalportal/${global.id}`);
 });
 
 module.exports = router;

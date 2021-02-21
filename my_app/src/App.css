@@ -6,3 +6,30 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
 }
+
+.Home_row img{
+  height: 100px;
+  width: 100px;
+}
+
+.Home_row{
+  margin-left: 50px;
+}
+
+.link1{
+  margin-left: 70px;
+  font-size: larger;
+  font-weight: bolder;
+}
+
+.link2{
+margin-left: 50px;
+font-size: larger;
+font-weight: bolder;
+}
+
+.link3{
+  margin-left: 35px;
+  font-size: larger;
+  font-weight: bolder;
+}
